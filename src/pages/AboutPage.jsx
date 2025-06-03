@@ -1,4 +1,4 @@
-import {navigate} from "../App.jsx";
+import {navigate} from "../Link.jsx.js";
 
 export default function AboutPage() {
   return (

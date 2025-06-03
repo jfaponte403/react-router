@@ -5,14 +5,6 @@ import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 
 
-export function navigate(href) {
-  window.history.pushState(null, null, href)
-
-  const navigationEvent = new Event(EVENTS.PUSHSTATE)
-  window.dispatchEvent(navigationEvent)
-}
-
-
 function App() {
 
   const [currentPath, setCurrentPath] = useState(window.location.pathname)
