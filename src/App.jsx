@@ -1,9 +1,13 @@
+import { lazy, Suspense } from 'react';
+
+const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
+const HomePage = lazy(() => import('./pages/HomePage.jsx'));
+const SearchPage = lazy(() => import('./pages/searchPage.jsx'));
+const NotFoundPage = lazy(() => import('./pages/404Page.jsx'));
+
 import './App.css';
-import HomePage from './pages/HomePage.jsx';
-import AboutPage from './pages/AboutPage.jsx';
 import { Router } from './Router.jsx';
-import NotFoundPage from './pages/404Page.jsx';
-import SearchPage from './pages/searchPage.jsx';
+import { Route } from './Route.jsx';
 
 const routes = [
   { path: '/', component: HomePage },
@@ -15,7 +19,13 @@ const routes = [
 function App() {
   return (
     <main>
-      <Router routes={routes} defaultComponent={NotFoundPage} />
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Router routes={routes} defaultComponent={NotFoundPage}>
+          <Route path="/" Component={HomePage} />
+          <Route path="/about" Component={AboutPage} />
+          <Route path="/search/:query" Component={SearchPage} />
+        </Router>
+      </Suspense>
     </main>
   );
 }
