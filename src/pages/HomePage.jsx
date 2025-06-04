@@ -1,11 +1,11 @@
-import {navigate} from "../Link.jsx.js";
+import {Link} from "../Link.jsx";
 
 export default function HomePage() {
   return (
     <>
       <h1>Home</h1>
       <p>idk bro</p>
-      <button onClick={() => navigate('/about')}>Go to about</button>
+      <Link to="/about">Go to about</Link>
       {/*<a href="/about"> About </a>*/}
     </>
   )
