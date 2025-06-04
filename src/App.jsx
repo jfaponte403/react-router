@@ -3,7 +3,7 @@ import HomePage from './pages/HomePage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import { Router } from './Router.jsx';
 import NotFoundPage from './pages/404Page.jsx';
-import SearchPage from "./pages/searchPage.jsx";
+import SearchPage from './pages/searchPage.jsx';
 
 const routes = [
   { path: '/', component: HomePage },

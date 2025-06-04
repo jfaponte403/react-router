@@ -1,4 +1,4 @@
-import {Link} from "../Link.jsx";
+import { Link } from '../Link.jsx';
 
 export default function NotFoundPage() {
   return (
@@ -8,5 +8,5 @@ export default function NotFoundPage() {
       <p>Page not found</p>
       <Link to="/">Home...</Link>
     </>
-  )
+  );
 }
