@@ -11,6 +11,7 @@ import { Route } from './Route.jsx';
 
 const routes = [
   { path: '/', component: HomePage },
+  { path: '/:lang/about', component: AboutPage },
   { path: '/about', component: AboutPage },
   { path: '/millos', component: () => <h1>Millonarios FC</h1> },
   { path: '/search/:query', component: SearchPage },
