@@ -1,6 +1,6 @@
 {
   "name": "matchcode-router",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -14,7 +14,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "prepare": "npm run test && swc src/components src/utils src/index.jsx -d lib",
+    "prepare": "npm run test && swc src/*.jsx -d lib",
     "preview": "vite preview",
     "test": "echo",
     "test:watch": "vitest",
